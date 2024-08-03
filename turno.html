@@ -1,81 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turnos</title>
+    <title>Barbería</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<header>
-    <nav>
-        <a href="">Nosotros</a>
-        <a href="">Inicio</a>
-        <a href="">Turnos</a>
-        <a href="">Perfil</a>
-    </nav>
-    <img src="servicios-salon-barberia.jpeg" alt="fondo">
-</header>
 <body>
-    <div>
-        <h1>Turnos</h1>
-    </div>
-    ################################
-    ######## PASO 1 TURNO ##########
-    ################################
-    <div>
-        <div>
-            <h2>Elegi a tu barbero</h2>
-            <h2>Paso 1 de 3</h2>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="index.html">Barbería</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Turnos</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Usuario
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Iniciar Sesión</a>
+                        <a class="dropdown-item" href="#">Registrarse</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <div>
-            <img src="images.jpg" alt="barbero_1">
-            <div>
-                <h3>Juan</h3>
-                <p>Descripcion del barbero</p>
+    </nav>
+
+    <!-- Imagen de fondo -->
+    <div class="hero-image">
+        <div class="hero-text">TURNOS</div>
+    </div>
+
+    <!-- Carrusel de Pasos -->
+    <div id="stepsCarousel" class="carousel slide container my-5" data-intervale="false">
+        <div class="carousel-inner">
+            <!-- PASO 1 -->
+            <div class="carousel-item active">
+                <div class="text-center">
+                    <h2>Elegi a tu Barbero</h2>
+                    <p>Paso 1 de 3</p>
+                </div>
+                <div class="row">
+                    <!-- Barbero 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card barber-card">
+                            <img src="img/barbero_2.png" class="card-img-top" alt="Juan">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">JUAN</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus eget orci quis volutpat. Sed quam justo, condimentum ut tempus in, rutrum a purus. Cras suscipit bibendum orci sit amet dignissim. Nunc lobortis mi nulla, quis sollicitudin urna fauc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Barbero 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card barber-card">
+                            <img src="img/barbero_1.jpg" class="card-img-top" alt="Juan">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">CARLOS</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus eget orci quis volutpat. Sed quam justo, condimentum ut tempus in, rutrum a purus. Cras suscipit bibendum orci sit amet dignissim. Nunc lobortis mi nulla, quis sollicitudin urna fauc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary float-right" onclick="$('#stepsCarousel').carousel('next')">Siguiente</button>
+            </div>
+
+            <!-- PASO 2 -->
+            <div class="carousel-item">
+                <div class="text-center">
+                    <h2>Elegi a tu Barbero</h2>
+                    <p>Paso 2 de 3</p>
+                </div>
+                <div class="row">
+                    <!-- Barber 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card barber-card">
+                            <img src="img/barbero_2.png" class="card-img-top" alt="Juan">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">JUAN</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus eget orci quis volutpat. Sed quam justo, condimentum ut tempus in, rutrum a purus. Cras suscipit bibendum orci sit amet dignissim. Nunc lobortis mi nulla, quis sollicitudin urna fauc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Barber 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card barber-card">
+                            <img src="img/barbero_1.jpg" class="card-img-top" alt="Juan">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">CARLOS</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus eget orci quis volutpat. Sed quam justo, condimentum ut tempus in, rutrum a purus. Cras suscipit bibendum orci sit amet dignissim. Nunc lobortis mi nulla, quis sollicitudin urna fauc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary float-right" onclick="$('#stepsCarousel').carousel('next')">Siguiente</button>
+            </div>
+
+            <!-- PASO 3 -->
+            <div class="carousel-item">
+                <div class="text-center">
+                    <h2>Completa tus datos</h2>
+                    <p>Paso 3 de 3</p>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="firstName">Nombre</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Ingresa tu nombre" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="lastName">Apellido</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Ingresa tu apellido" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Celular</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Ingresa tu número de celular" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-        <div>
-            <img src="gratis-png-barba-barbero-peinado-cosmetologa-barba.png" alt="barbero_2">
-            <div>
-                <h3>Pedro</h3>
-                <p>Descripcion del barbero</p>
-            </div>
-        </div>
     </div>
-    ################################
-    ######## PASO 2 TURNO ##########
-    ################################
-    <div>
-        <div>
-            <h2>Selecciona tu turno</h2>
-            <h2>Paso 2 de 3</h2>
-        </div>
-        <div>
-            <h3>SELECCIONA EL DIA</h3>
-                <input type="date">
-        </div>
-        <div>
-            <h3>SELECCIONA EL HORARIO</h3>
-                <input type="datetime">
-        </div>
-    </div>
-    ################################
-    ######## PASO 3 TURNO ##########
-    ################################
-    <div>
-        <div>
-            <h2>Completa tus datos</h2>
-            <h2>Paso 3 de 3</h2>
-        </div>
-        <div>
-            <form action="">
-                <label for="name">NOMBRE</label>
-                    <input type="text">
-                <label for="cel">CELULAR</label>
-                    <input type="tel">
-                <label for="text">NOTA</label>
-                <input type="text">
-            </form>
-        </div>
-    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
