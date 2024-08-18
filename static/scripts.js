@@ -10,6 +10,8 @@ document.getElementById('dia').setAttribute('max', maxDateStr);
 
 function seleccionar() {
     const div = document.getElementById('barbero');
-    // Alterna la clase 'selected' en el div clickeado
+    // Alterna la clase 'seleccionado' en el div clickeado
     div.classList.toggle('seleccionado')
 }
+
+
