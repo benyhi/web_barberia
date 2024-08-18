@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbería</title>
-    <link rel="stylesheet" href="static/style.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/turnos-style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Turnos</title>
 </head>
-<body>
-    <!-- Navbar -->
+<header>
+        <!-- Imagen de fondo -->
+    <div class="hero-image">
+        <div class="hero-text">SACA TU TURNO</div>
+    </div>
+
+ <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="index.html">Barbería</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,19 +26,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Turnos</a>
+                    <a class="nav-link" href="turno.html">Turnos</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Usuario
+                        <span class="material-symbols-outlined">account_circle</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Iniciar Sesión</a>
@@ -39,14 +48,10 @@
             </ul>
         </div>
     </nav>
-
-    <!-- Imagen de fondo -->
-    <div class="hero-image">
-        <div class="hero-text">TURNOS</div>
-    </div>
-
+</header>
+<body>
     <!-- Carrusel de Pasos -->
-    <div id="stepsCarousel" class="carousel slide container my-5" data-intervale="false">
+    <div id="stepsCarousel" class="carousel slide container my-5" data-interval="false">
         <div class="carousel-inner">
             <!-- PASO 1 -->
             <div class="carousel-item active">
@@ -56,7 +61,7 @@
                 </div>
                 <div class="row">
                     <!-- Barbero 1 -->
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6 mb-4 barbero" id="barbero" onclick="seleccionar()">
                         <div class="card barber-card">
                             <img src="img/barbero_2.png" class="card-img-top" alt="Juan">
                             <div class="card-body text-center">
@@ -66,7 +71,7 @@
                         </div>
                     </div>
                     <!-- Barbero 2 -->
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6 mb-4" id="barbero" onclick="seleccionar()">
                         <div class="card barber-card">
                             <img src="img/barbero_1.jpg" class="card-img-top" alt="Juan">
                             <div class="card-body text-center">
@@ -82,32 +87,41 @@
             <!-- PASO 2 -->
             <div class="carousel-item">
                 <div class="text-center">
-                    <h2>Elegi a tu Barbero</h2>
+                    <h2>Elegi el día y hora del turno</h2>
                     <p>Paso 2 de 3</p>
                 </div>
-                <div class="row">
-                    <!-- Barber 1 -->
-                    <div class="col-md-6 mb-4">
-                        <div class="card barber-card">
-                            <img src="img/barbero_2.png" class="card-img-top" alt="Juan">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">JUAN</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus eget orci quis volutpat. Sed quam justo, condimentum ut tempus in, rutrum a purus. Cras suscipit bibendum orci sit amet dignissim. Nunc lobortis mi nulla, quis sollicitudin urna fauc.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Barber 2 -->
-                    <div class="col-md-6 mb-4">
-                        <div class="card barber-card">
-                            <img src="img/barbero_1.jpg" class="card-img-top" alt="Juan">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">CARLOS</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus eget orci quis volutpat. Sed quam justo, condimentum ut tempus in, rutrum a purus. Cras suscipit bibendum orci sit amet dignissim. Nunc lobortis mi nulla, quis sollicitudin urna fauc.</p>
-                            </div>
+                <div class="row justify-content-center">
+                    <!-- Selección de día y hora -->
+                    <div class="col-md-8">
+                        <div class="card p-3">
+                            <h5 class="card-title text-center">Seleccionar Turno</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="dia" class="form-label">Selecciona un día</label>
+                                    <input type="date" class="form-control" id="dia" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="hora" class="form-label">Selecciona un horario</label>
+                                    <select class="form-select" id="hora" required>
+                                        <option value="" disabled selected>Elige una opción...</option>
+                                        <option value="08:00">08:00 AM</option>
+                                        <option value="09:00">09:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="13:00">01:00 PM</option>
+                                        <option value="14:00">02:00 PM</option>
+                                        <option value="15:00">03:00 PM</option>
+                                        <option value="16:00">04:00 PM</option>
+                                        <option value="17:00">05:00 PM</option>
+                                        <option value="18:00">06:00 PM</option>
+                                    </select>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary float-right" onclick="$('#stepsCarousel').carousel('next')">Siguiente</button>
+                <button class="btn btn-primary float-right mt-3" onclick="$('#stepsCarousel').carousel('next')">Siguiente</button>
             </div>
 
             <!-- PASO 3 -->
@@ -116,8 +130,8 @@
                     <h2>Completa tus datos</h2>
                     <p>Paso 3 de 3</p>
                 </div>
-                <div class="row">
-                    <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -145,6 +159,7 @@
         </div>
     </div>
 
+    <script src="static/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
