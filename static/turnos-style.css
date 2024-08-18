@@ -51,3 +51,18 @@ html{
 .seleccionado {
     border-color: rgba(87, 143, 247, 0.788);
 }
+
+hr{
+    width: 100px;
+    background-color: #7c4dff;
+    height: 2px
+}
+
+footer{
+    background-color: #202124
+}
+
+.copyright{
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
