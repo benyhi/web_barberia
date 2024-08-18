@@ -1,0 +1,40 @@
+/* Estilos personalizados para la navbar y el menú desplegable */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo translúcido */
+}
+.navbar .nav-link, .navbar .navbar-brand {
+    color: white; /* Color del texto */
+}
+.navbar .nav-link:hover, .navbar .navbar-brand:hover {
+    color: #ddd; /* Color del texto al pasar el cursor */
+}
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo translúcido */
+    border: none; /* Sin bordes */
+}
+.dropdown-item {
+    color: white; /* Color del texto */
+}
+.dropdown-item:hover {
+    color: #ddd; /* Color del texto al pasar el cursor */
+    background-color: transparent; /* Sin fondo al pasar el cursor */
+}
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1); /* Hacer el borde translúcido */
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Cambiar el color del icono */
+}
+
+/* Estilo para el header con imagen de fondo */
+.hero-image {
+    background-size: cover;
+    background-position: center;
+    height: 500px
+}
+
+
+.carousel-item img {
+    height: 300px;
+}
+
