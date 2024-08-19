@@ -35,4 +35,4 @@ Contribuciones
 ¡Las contribuciones son bienvenidas! 
 
 ## Licencia
-Para más detalles, consulta el archivo LICENSE.
+Para más detalles, consulta al siguiente correo electronico : n.diaz@itecriocuarto.org.ar
