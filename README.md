@@ -6,7 +6,7 @@ Este es el repositorio del sitio web de una barbería masculina. Ofrecemos servi
 
 HTML5: Para la estructura del sitio web.
 CSS: Para el diseño y la presentación.
-JavaScript: Para la funcionalidad del sitio, incluyendo el login con local storage y session storage.
+JavaScript: Para la funcionalidad del sitio, incluyendo el login con local storage.
 Bootstrap: Para el diseño responsivo y componentes pre-estilizados.
 Pure CSS: Para un diseño minimalista y ligero.
 
@@ -35,4 +35,4 @@ Contribuciones
 ¡Las contribuciones son bienvenidas! 
 
 ## Licencia
-Para más detalles, consulta el archivo LICENSE.
+Para más detalles, consulta al siguiente correo electronico : n.diaz@itecriocuarto.org.ar
