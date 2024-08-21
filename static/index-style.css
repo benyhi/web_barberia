@@ -1,6 +1,11 @@
 html{
     font-family: Inter, sans-serif;
 }
+/* NAVBAR */
+.logo{
+    width: 42px;
+    height: 42px;
+}
 
 .navbar{
     background-color: rgba(0, 0, 0, 0.285);
@@ -11,6 +16,32 @@ html{
     color: white;
     text-transform: bold;
 }
+
+nav .cursos{
+    display: none;
+}
+
+.dropdown-menu{
+    background-color: rgba(0, 0, 0, 0.285) !important;
+}
+
+.dropdown-menu .logout{
+    display: none;
+}
+.dropdown span{
+    font-size: 2.5rem;
+}
+
+
+.links{
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .3s ease;
+}
+.links:hover{
+    border-bottom: 1px solid white;
+}
+
+/* NAVBAR */
 
 .hero-image{
     background: url('/img/fondo_2.jpeg') no-repeat top center;
@@ -87,12 +118,13 @@ html{
     font-size: 50px;
 }
 
+/* FOOTER */
+
 hr{
     width: 100px;
-    background-color: #7c4dff;
+    background-color: #0d6efd;
     height: 2px
 }
-
 footer{
     background-color: #202124
 }

@@ -1,0 +1,290 @@
+html{
+    font-family: Inter, sans-serif;
+}
+
+.separador{
+    width: 90%;
+
+}
+
+/* NAVBAR */
+
+.logo{
+    width: 42px;
+    height: 42px;
+}
+
+
+nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.285);
+}
+
+.direcciones{
+    display: flex !important;
+}
+
+.direcciones li a{
+    color: white !important;
+}
+
+.direcciones a:hover{
+    background-color: transparent !important;
+    border-bottom: 1px solid white;
+}
+
+nav #cursos{
+    display: none;
+}
+
+.logo-title{
+    padding-left: 0px !important;
+    color: white !important;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.dropdown-content{
+    display: none !important;
+}
+
+.dropdown-content #logout{
+    display: none;
+}
+
+.visible{
+    position:absolute !important;
+    display: flex !important;
+    flex-direction: column;
+    right: 15%;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.285);
+}
+
+.visible a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.285);
+}
+
+.visible a:hover{
+    background-color: rgba(255, 255, 255, 0.322);
+}
+
+.dropdown-menu{
+    background-color: rgba(0, 0, 0, 0.285) !important;
+}
+
+
+.dropdown span{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.links{
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .3s ease;
+}
+.links:hover{
+    border-bottom: 1px solid white;
+}
+
+/* NAVBAR */
+
+
+.hero-image{
+    background: url('/img/fondo_2.jpeg') no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.hero-text {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.hero-title{
+    color: white;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+
+.hero-btn{
+    margin: .5rem;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    color: white;
+    border: 2px solid white;
+    transition: background-color .3s ease;
+}
+
+.hero-btn:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.285);
+    text-decoration: none;
+}
+
+.container-principal{
+    width: 90%;
+    margin: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+
+.icono{
+    font-size: 64px;
+}
+
+.container-iconos{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container-iconos-icono{
+    text-align: center;
+}
+
+.container-iconos-icono span{
+    font-size: 50px;
+}
+
+.icono-star{
+    font-size: 50px;
+}
+
+.valoracion-section{
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 500px;
+}
+
+.valoracion-section span{
+    font-size: 50px;
+}
+
+.mapa{
+    text-align: center;
+    margin: 2rem 2rem;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: #202124
+}
+
+.copyright{
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    padding: 1px;
+}
+
+.footer-container{
+    padding: 50px;
+}
+
+.footer-col{
+    text-align: center;
+}
+
+.footer-col a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-col p{
+    color: white;
+}
+
+.footer-col h6{
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.footer-separador{
+    width: 100px;
+    background-color: #0d6efd;
+    height: 2px;
+    border: none;
+}
+
+/* FOOTER */
+
+/* Carrusel contenedor */
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    
+}
+
+/* Contenedor de los items del carrusel */
+.carrusel-contenido {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Items del carrusel */
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrusel-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
